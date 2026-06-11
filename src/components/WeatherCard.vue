@@ -34,7 +34,7 @@ const toggleFav = () => {
 
 const iconUrl = computed(() => {
   if (!props.data?.weather?.[0]?.icon) return ''
-  return `/weather-icons/${props.data.weather[0].icon}.png`
+  return `${import.meta.env.BASE_URL}weather-icons/${props.data.weather[0].icon}.png`
 })
 
 const temp = computed(() => props.data ? Math.round(props.data.main.temp) : null)
